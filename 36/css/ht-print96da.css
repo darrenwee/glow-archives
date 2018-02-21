@@ -1,0 +1,20 @@
+/* UTSKRIFTSVERSION */
+
+/* Visas enbart på utskriftsversionen */
+.only_print{display:inherit!important;}
+
+/* Utskriftsinformation (utskriftsdatum och URL */
+#print_info{margin-top:20px;}
+
+/* Ingen administrationspanel */
+body{margin-top:0!important;}
+#adminpanel,.frontEndEditIcons,.typo3-editPanel{display:none!important;}
+
+/* Utskrift av expanderbara fält i huvudfältet*/
+#text_content_main .tab-sidebar-toggle{display:inherit;}
+
+
+/* BAKÅTKOMPABILITET */
+
+h4{font-size:16pt!important;font-weight: bold;}
+h5{font-size:12pt!important;font-weight: bold;}

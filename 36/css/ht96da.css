@@ -1,0 +1,250 @@
+/* HEADER */
+
+/* Fakultetsnamnet är långt, så det behöver minskas något */
+@media all and (min-width: 641px) {
+	.faculty #header_content #main_title.long_title{font-size:26px;line-height:26px;margin-top: 45px}
+}
+@media all and (max-width: 640px) {
+	.faculty #header_content #header_titles #main_title.long_title{font-size:1.625rem;line-height:2rem;margin-top:2.25rem}
+	.faculty #header_content #header_titles #main_sub_title{display: none}
+	.department #header_content #header_titles #main_sub_title{font-size: 0.975rem}
+}
+
+/* Om webbplatsnamnet är långt, så flytta upp det något */
+@media all and (max-width: 640px){
+	.department #header_content #header_titles #main_title.long_title{margin-top: 1rem}
+}
+
+/* Om webbplatsen är på engelska, så visa engelsk logga */
+#page_wrapper.english #header_wrapper #header_logo{background-image:url(../png/logo-lu-en.png);}
+
+
+/* MAIN NAVIGATION / CONTENT NAVIGATION */
+
+/* Definiera menyavskiljare (färgerna bör eventuellt ändras, eftersom dessa inte används i LU-layouten)*/
+#main_navigation li.separator a{color:#999999;font-style:italic;}
+#main_navigation li.separator a:hover{text-decoration:none;}
+.department #main_navigation li.separator a{color:#CCCCCC;}
+#content_navigation .menu-level-1 li.separator > a{color:#CCCCCC;font-style:italic;}
+#content_navigation .menu-level-1 li.separator > a:hover{text-decoration:none;}
+#content_navigation .menu-level-2 li.separator > a{padding-left:0;background-image:none;color:#999999;}
+
+
+/* MAIN CONTENT */
+
+/* Inga flytande element över understrecket */
+#byline{clear:both}
+
+/* Centering text */
+.text_center {
+	text-align: center!important;
+}
+
+/* Content type */
+.info_large {
+	font-size: 24px;
+	padding: 1rem;
+	margin-top: .1rem;
+	margin-bottom: .1rem;
+}
+
+/* Warning info title */
+#info_warning {
+	display: none;
+}
+
+/* Expanderbart fält i huvuddelen */
+#text_content_main .tab-sidebar-info{margin:0 0 0 15px;padding:0;}
+#text_content_main .tab-sidebar-info h2{margin:0 0 5px -15px;padding:0 0 0 15px;border-style:none;text-transform:none;}
+#text_content_main .tab-sidebar-info ul{margin-left:15px;}
+#text_content_main .tab-sidebar-toggle h2{background-position:left center;}
+@media all and (max-width: 640px) {
+	#text_content_main .tab-sidebar-info h2{font-size:1.875rem;line-height:2.5rem;}
+}
+
+/* Expanderbara fält i huvuddelen ska vara sammandragna initialt */
+#text_content_main .tab-sidebar-info > h2{background-image:url(../png/submenu-arrow-right-large.png);}
+#text_content_main .tab-sidebar-info > div,#text_content_main .tab-sidebar-info > p,#text_content_main .tab-sidebar-info > ul{display:none;}
+
+/* Uppdelning mellan länk och text (person och projekt) */
+#text_content_main .tab-sidebar-info > ul li a{display:block;}
+
+/* Personbildslista */
+#text_content_main .person div{cursor: pointer;}
+#text_content_main .person div div{width:84px;height:84px;}
+#text_content_main .person div div{width:100px;height:100px;text-align:center}
+
+/* Kursöversikt */
+#text_content_main table.courseOverview tr:hover{background:#EBE5D8;}
+#text_content_main table.courseOverview tr.header:hover{background:#FFFFFF;}
+#text_content_main table.courseOverview,table.courseOverview td{border:none;}
+#text_content_main table.courseOverview tr.header td{padding-top:27px;font-family:Georgia,serif;font-size:21px;}
+#text_content_main table.courseOverview tr.header td{padding-top:20px;font-family:Georgia,serif;font-size:16px;}
+#text_content_main table.courseOverview td.course{display:list-item;margin-left:20px;padding-left:0}
+#text_content_main table.courseOverview td.indent{margin-left:35px;}
+#text_content_main ul li.courseListHeading {margin:20px 0 0 -15px;list-style:none;font-family:Georgia,serif;font-size:16px;}
+#text_content_main ul li.courseListHeading {margin:20px 0 0 -15px;list-style:none;font-family:Georgia,serif;font-size:14px;}
+@media all and (max-width: 640px) {
+	#text_content_main table.courseOverview tr.header td{font-size:2rem;font-family:Arial,sans-serif;font-weight:700;}
+	#text_content_main table.courseOverview td.course{margin-left:0}
+	#text_content_main ul li.courseListHeading {font-size:2.1875rem;font-family:Arial,sans-serif}
+}
+
+
+/* BILDSÄTTNING */
+
+/* Bildsättningstyperna intext-right-nowrap (25) och intext-left-nowrap (26) */
+@media all and (min-width: 641px) {
+	#text_wrapper.grid-15 #text_content_main .text_image_nowrap{width: 192px}
+	#content_sidebar_wrapper.grid-8 #content_sidebar .text_image_nowrap{width: 96px}
+	#text_wrapper.grid-23 #text_content_main.no-sidebar .text_image_nowrap{width: 432px}
+}
+
+
+/* START PAGE */
+
+/* Bildspelen på HT har höjden 320px */
+.top-promo, .top-promo-overlay {height:320px}
+@media all and (max-width: 640px){
+	.top-promo, .top-promo-overlay {height:auto}
+	
+	#warning-info-title {
+		display: block;
+	}
+}
+
+
+
+/* Muspekaren på bildspelskontrollerna simulerar länk, eftersom href-taggarna har plockats bort */
+a.slider-control:hover {cursor:pointer}
+
+/* Today */
+/* .today-wrapper.calendar-horizontal h2{text-transform:none!important;} */
+.today-wrapper.calendar-horizontal .today-items{border-bottom:1px solid #9C6114; margin: 0 16px}
+.today-wrapper.calendar-horizontal .today-items-last{margin: 0 16px}
+.today-wrapper.calendar-horizontal .today-item-left{padding-left: 0}
+.today-wrapper.calendar-horizontal .today-item-right{padding-right: 0}
+.today-wrapper.calendar-horizontal .calendar-title{margin-top: 0}
+
+
+/* SIDEBAR */
+
+/* Definiera h3 exakt som h2 */
+#content_sidebar h3{border-bottom:1px solid #9C6114;border-top:1px solid #9C6114;color:#8E5614;display:block;font-family:Arial,sans-serif;font-size:12px;font-weight:400;line-height:17px;margin-bottom:10px;text-transform:uppercase;padding:5px 0 3px;margin-top:0px;}
+@media all and (max-width: 640px) {
+	#content_sidebar h3{font-size:1.875rem;line-height:1.875rem;border-bottom:1px solid #9C6114;border-top:1px solid #9C6114;font-weight:700;padding:1.125rem 0;margin-bottom: 0.625rem;}
+}
+
+
+/* PROMOS, PROMO-BANNERS, TOP PROMO */
+
+/* Eftersom landningssidan (704px) och undersidan (672px) är något smalare än startsidan (736px),
+så definieras bredderna om för puff-block, puff-banner och bildspel om */
+
+/* Puff-block på landningssidor och undersidor */
+@media all and (min-width: 641px) {
+	#content .promo_wrapper{border-style:none;background:inherit;margin-bottom:0;padding:0;}
+	#content article .promo_wrapper .start-grid-8{width:216px;margin:0 6px;}
+	#content article .promo_wrapper .alpha{margin-left:0}
+	#content article .promo_wrapper .omega{margin-right:0}
+}
+@media all and (max-width: 640px) {
+	#content article .promo_wrapper{margin:2.5rem 0}
+}
+
+/* Puff-banner på landningssidor och undersidor */
+@media all and (min-width: 641px) {
+	#landing_page .promo_banner_text{width:224px;}
+	#landing_page .promo_banner_image{width:480px;}
+	#content article .promo_banner_text{width:216px;}
+	#content article .promo_banner_image{width:456px;}
+}
+@media all and (max-width: 640px) {
+	#content article .promo_banner{margin:0 0 2.5rem}
+}
+
+/* Bildspel på landningssidor och undersidor */
+#landing_page .slider-controls{right:48px;}
+#content article .slider-controls{right:64px;}
+@media all and (max-width: 640px) {
+	#content article .slideshow-pager{margin:-4.5rem -2.5rem 0}
+}
+
+/* Eftersom bilderna blir mindre i dessa element så centreras de */
+#content .promo_wrapper .promo_image,#content .promo_banner_image,#content .top-promo{background-position:center;}
+
+/* 350-year jubilee ribbon for TOP PROMO. For only PROMO, an inline style is implemented instead. */
+.top-promo-ribbon{background:url(../png/top-promo-ribbon.png) no-repeat scroll right top transparent;}
+
+/* FOOTER */
+
+/* Om webbplatsen är på engelska, så visa engelsk logga */
+#page_wrapper.english #footer_wrapper #footer_content #footer_logo_information_wrapper #footer_logo{background-image:url(../png/footer-logo-lu-en.png);}
+
+
+/* FORMULÄRHANTERING */
+
+/* Knappar markeras när muspekaren placeras på dem */
+input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button:hover{background:#EBE5D8;}
+
+/* Luft kring efter radioknappar och kryssrutor i horisontella formulär */
+.form-horizontal .radio-inline + .radio-inline, .form-horizontal .checkbox-inline + .checkbox-inline { margin-left: 10px; }
+
+
+/* UNDERVISNINGSPLATTFORMEN */
+
+/* Användarbilder ska ej visas */
+#tx_chcforum-pi1 .userPic{display:none}
+
+
+/* UTSKRIFTSVERSION */
+
+/* Visas enbart på utskriftsversionen och döljs i webbläsaren */
+.only_print{display:none;}
+
+
+/* BAKÅTKOMPABILITET */
+
+@media all and (min-width: 641px) {
+	h4{font-size:21px;line-height:32px;margin-bottom:5px;margin-top:16px;}
+	h5{font-size:16px;line-height:24px;margin-bottom:3px;margin-top:16px;}
+}
+@media all and (max-width: 640px){
+	h4{font-size:2.5rem;line-height:3rem;margin-bottom:0.3125rem;margin-top:1rem}
+}
+
+
+/* Centrering av text med class, använder det class-name som är förvalt för RTE-editorn  Jfr WHD174268 20180108 ost-sbj*/
+.align-center{
+        text-align:center;
+}
+
+
+
+
+#searchForm select {
+	margin-bottom: 0;
+}
+
+
+/* RESPONSIVE ADAPTATIONS */
+
+/* TITLES */
+/* TITLES AND NAVIGATION */
+@media (max-width: 640px) {
+        #page_title h1 {
+                overflow: hidden;
+                text-overflow: ellipsis;
+                line-height: 4.3rem;
+        }
+
+        #responsive_navigation li>a:first-child {
+            overflow: hidden;
+            text-overflow: ellipsis;
+            padding-right: 2rem;
+        }
+
+        #responsive_navigation li.has_sub>a:first-child {
+            padding-right: 7rem;
+        }
+}
